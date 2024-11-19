@@ -1,5 +1,30 @@
-{
-    "title": "Portfolio(this)",
-    "description": "My persnol website where I post my work and blogs on stuff I learned or worked on💻👨🏼‍💻",
-    "technologies": ["Front-end (HTML, CSS, Javascript)", "Back-end (express JS)"]
-}
+[
+    {
+        "title": "Portfolio(this)",
+        "description": "My persnol website where I post my work and blogs on stuff I learned or worked on💻👨🏼‍💻",
+        "technologies": ["Front-end (HTML, CSS, Javascript)", "Back-end (express JS)"],
+        "links": {
+            "Github": {
+                "link": "https://github.com/ggamingx/protofolio/",
+                "icon": "icons/github-142-svgrepo-com.svg"
+            },
+            "Blog": {
+                "link": "soon"
+            }
+        }    
+    },
+    {
+        "title": "Hit Radio Bot",
+        "description": "A Moroccan Discord Bot, focused on playing HITRADIO stations 24H 7/7! that I founded back in 2020📻🤖",
+        "technologies": ["Node.js (Discord.js)"],
+        "links": {
+            "Support server": {
+                "link": "https://discord.gg/y9mywYSc",
+                "icon": "icons/discord-svgrepo-com.svg"
+            },
+            "Add to your server": {
+                "link": "https://discord.com/api/oauth2/authorize?client_id=711352397716521037&permissions=412421048384&scope=bot%20applications.commands"
+            }
+        }
+    }
+]
