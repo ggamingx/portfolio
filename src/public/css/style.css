@@ -5,7 +5,7 @@ a {
 }
 
 html {
-    scroll-behavior: smooth;
+    background-color: #181818;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
     margin: 0;
     color: white;
     height: 100vh;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
@@ -70,6 +70,7 @@ ul {
     height: 100vh;
     font-size: x-large;
     margin-left: 20px;
+    border-bottom: 2px solid #b85d00;
 }
 
 .it {
