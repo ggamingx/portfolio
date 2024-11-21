@@ -10,7 +10,7 @@ body {
     color: white;
     height: 100vh;
     background-attachment: fixed;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
 
@@ -164,7 +164,6 @@ ul {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.4), rgba(83, 46, 13, 0.4)), url('https://www.transparenttextures.com/patterns/noise.png');
     border-radius: 15px;
     width: 400px;
-    /* border: 2px solid transparent; */
     background-clip: padding-box;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -193,7 +192,42 @@ ul {
     border-radius: 15px 15px 0 0;
 }
 
-footer {
-    padding: 2rem;
+.coming-soon-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 10px;
     text-align: center;
+    padding: 20px;
+}
+
+.coming-soon-wrapper {
+    color: #555;
+}
+
+.coming-soon-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: #1e1e1e; 
+    color: #ccc; 
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    border-top: 2px solid #b85d00;
+    margin-top: 20px;
+}
+  
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
+  
+.footer p:hover {
+    color: #b85d00; 
+    transition: color 0.3s;
 }
