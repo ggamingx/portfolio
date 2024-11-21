@@ -4,6 +4,10 @@ a {
     color: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: radial-gradient(circle at right center, #4E2E0E 5%, #1A0D00 30%, #0e0e0e 80%);
     margin: 0;
