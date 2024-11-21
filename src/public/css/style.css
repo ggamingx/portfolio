@@ -73,8 +73,14 @@ ul {
     text-underline-offset: 4px;
 }
 
-.icon:hover {
-    filter: invert(40%) sepia(28%) saturate(2069%) hue-rotate(359deg) brightness(94%) contrast(105%);
+.home-icons {
+    margin: 20px;
+    font-size: 50px;
+    transition: all 0.2s ease;
+}
+
+.home-icons:hover {
+    color: #e07000;
 }
 
 .title {
@@ -119,15 +125,75 @@ ul {
     margin-bottom: 5px;
 }
 
+.techs {
+    list-style-type: disc;
+}
+
 .buttons {
     display: flex;
 }
 
-.btn {
-    width: 100%;
-    margin: 20px;
-    padding: 10px;
+.button {
+    margin: 10px;
     margin-bottom: 0;
+    padding: 10px 20px;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #ff8533;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #ff8533;
+    color: #000;
+    box-shadow: 0 0 10px rgba(255, 133, 51, 0.7), 0 0 40px rgba(255, 133, 51, 0.5);
+    transform: scale(1.05);
+}
+
+.blog-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    margin: 20px;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.4), rgba(83, 46, 13, 0.4)), url('https://www.transparenttextures.com/patterns/noise.png');
+    border-radius: 15px;
+    width: 400px;
+    /* border: 2px solid transparent; */
+    background-clip: padding-box;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(255, 133, 51, 0.3) 0px 10px 36px 0px, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+}
+
+.blog-text {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+footer {
+    padding: 2rem;
     text-align: center;
-    background-color: #b85d00;
 }

@@ -6,10 +6,7 @@
         "links": {
             "Github": {
                 "link": "https://github.com/ggamingx/protofolio/",
-                "icon": "icons/github-142-svgrepo-com.svg"
-            },
-            "Blog": {
-                "link": "soon"
+                "icon": "fa-brands fa-github"
             }
         }    
     },
@@ -20,7 +17,7 @@
         "links": {
             "Support server": {
                 "link": "https://discord.gg/y9mywYSc",
-                "icon": "icons/discord-svgrepo-com.svg"
+                "icon": "fa-brands fa-discord"
             },
             "Add to your server": {
                 "link": "https://discord.com/api/oauth2/authorize?client_id=711352397716521037&permissions=412421048384&scope=bot%20applications.commands"

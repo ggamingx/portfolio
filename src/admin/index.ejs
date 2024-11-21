@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6be1ff0eaa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <% if (user) { %>
+        <div class="dashboard">
+            <aside class="sidebar">
+              <h2 class="logo">Admin</h2>
+              <nav>
+                <ul>
+                  <li><a href="#overview"><i class="fa-solid fa-chart-line"></i> Overview</a></li>
+                  <li><a href="#projects"><i class="fa-solid fa-folder"></i> Projects</a></li>
+                  <li><a href="#blogs"><i class="fa-solid fa-blog"></i> Blogs</a></li>
+                  <li><a href="#settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                  <li><a href="#logout"><i class="fa-solid fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+              </nav>
+            </aside>
+          
+            <main class="main-content">
+              <header class="dashboard-header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                  <span>Welcome, Admin</span>
+                </div>
+              </header>
+          
+              <section class="content-grid">
+                <div class="card stats-card">
+                  <h3>Total Projects</h3>
+                  <p>15</p>
+                </div>
+                <div class="card stats-card">
+                  <h3>Total Blogs</h3>
+                  <p>10</p>
+                </div>
+                <div class="card stats-card">
+                  <h3>New Comments</h3>
+                  <p>23</p>
+                </div>
+                <div class="card actions-card">
+                  <h3>Create</h3>
+                  <a href="#new-project" class="button">New Project</a>
+                  <a href="#new-blog" class="button secondary">New Blog</a>
+                </div>
+              </section>
+            </main>
+          </div>
+    <% } else { %>
+        <div class="login-container">
+            <div class="login-card">
+                <h2>Welcome Back</h2>
+                <p>Please log in to continue</p>
+                <a class="login-button" href="/api/auth/google">Log In</a>
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>
