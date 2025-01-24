@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6be1ff0eaa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dashboard/css/post.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="sidebar" id="sidebar">
+    <ul class="sidebar-nav">
+      <li><a href="../" id="dashboard">Dashboard</a></li>
+      <li><a href="blogs" id="blogs">Manage Blogs</a></li>
+      <li><a href="#manage-projects" id="projects">Manage Projects</a></li>
+      <li><a href="#settings" id="settings">Settings</a></li>
+      <li><a href="/api/auth/logout">Logout</a></li>
+    </ul>
+  </nav>
+  <header>
+    <nav class="top-navbar">
+      <button class="sidebar-toggle" onclick="toggleSidebar()">
+          <i class="fa-solid fa-bars"></i>
+      </button>
+      <h1>Admin Panel</h1>
+    </nav>
+  </header>
+  <main class="main-content">
+    <div class="main-content-navbar">
+      <a href="../"><i class="fa-solid fa-arrow-left"></i> back</a>
+    </div>
+    <form class="post">
+      <div class="select-wrap">
+        <select name="type" id="type-select" required class="select f">
+          <option value="null" selected disabled>Chose the type to post</option>
+          <option value="project">Project</option>
+          <option value="blog">blog</option>
+        </select>
+      </div>
+    </form>
+    <form id="project-post" class="post-content hidden">
+      <div class="td">
+        <input type="text" placeholder="Title" name="title" class="p title form f" required>
+        <textarea name="description" class="p description form f" placeholder="Description" required></textarea>
+      </div>
+      <h2 class="tech title"><i class="fa-solid fa-code"></i> Technologies</h2>
+      <div class="tech-container">
+        <button class="add tech btn" onclick="addItem('tech')"><i class="fa-solid fa-plus"></i> Add a tech</button>
+        <div class="tech-input-container" id="tech-input-container">
+        </div>
+      </div>
+      <h2 class="links title"><i class="fa-solid fa-link"></i> Links</h2>
+      <div class="link-container">
+        <button class="add link btn" onclick="addItem('link')"><i class="fa-solid fa-plus"></i> Add a link</button>
+        <div id="link-input-container">
+        </div>
+      </div>
+      <div class="submit-container">
+        <input type="submit" value="submit" class="submit btn">
+      </div>
+    </form>
+    <form id="blog-post" class="post-content hidden" enctype="multipart/form-data">
+      <div class="td">
+        <input type="text" placeholder="Title" class="b title form f" required name="title">
+        <div class="file-input-container" id="file-input-container">
+          <div id="file-upload-container">
+            <label for="file-upload" class="costum-file-upload"><i class="fa-solid fa-file-image file-input-icon"></i>Upload an image</label>
+            <input type="file" accept="image/*" class="file-input" id="file-upload" name="cover">
+            <div class="url-input-container">
+              <input type="url" placeholder="image URL (.jpeg, .png, .gif...)" class="url-input form f" name="url" id="image-url-input">
+              <button class="btn-primary input-btn" id="img-url-btn" onclick="updateImageDisplay()"><i class="fa-solid fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="image-preview hidden" id="image-preview">
+            <div class="image-info">
+            </div>
+          </div>
+          <div class="uploaded-file-error hidden" id="uploaded-file-error">
+            <span><a onclick="deleteFile()">Invalid image try again</a></span>
+          </div>
+          </div>
+        </div>
+        <textarea class="b description form f" placeholder="Blog (Markdown form)" required name="content"></textarea>
+        <textarea class="b description form f short" placeholder="A short description of the blog" required name="description"></textarea>
+        <div class="submit-container">
+          <input type="submit" value="submit" class="submit btn">
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="dashboard/js/post.js"></script>
+</body>
+</html>

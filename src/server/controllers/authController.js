@@ -7,7 +7,7 @@ const { OAuth2Strategy: GoogleStrategy } = require('passport-google-oauth');
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: process.env.REDIRECT_URL,
+    callbackURL: `http://${process.env.HOST}:${process.env.PORT}/api/auth/google/callback`,
     },
     function (token, tokenSecret, profile, done) {
         return done(null, profile);
@@ -28,7 +28,7 @@ exports.login = passport.authenticate('google', {
 );
 
 exports.callback = [
-    passport.authenticate('google', { failureRedirect: '/' }),
+    passport.authenticate('google', { failureRedirect: '/'}),
     (req, res) => {
         res.redirect('/admin');
     }

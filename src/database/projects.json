@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "title": "Portfolio(this)",
         "description": "My persnol website where I post my work and blogs on stuff I learned or worked on💻👨🏼‍💻",
         "technologies": ["Front-end (HTML, CSS, Javascript)", "Back-end (express JS)"],
@@ -11,6 +12,7 @@
         }    
     },
     {
+        "id": "2",
         "title": "Hit Radio Bot",
         "description": "A Moroccan Discord Bot, focused on playing HITRADIO stations 24H 7/7! that I founded back in 2020📻🤖",
         "technologies": ["Node.js (Discord.js)"],

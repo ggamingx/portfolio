@@ -1,0 +1,137 @@
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    background: #202020;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #181818, #202020);
+    color: #fff;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: #1e1e1e;
+    height: 3.8rem;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.sidebar-toggle {
+    display: none;
+    position: absolute;
+    left: 20px;
+    background: #f58549;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    width: 2rem;
+    height: 1.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: #d06a3c;
+}
+
+.top-navbar h1 {
+    font-size: 1.5rem;
+    color: #f58549;
+    text-align: center;
+    padding: 6px;
+    margin: 0;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a, #292929);
+    position: fixed;
+    top: 3.8em; 
+    left: 0; 
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #1e1e1e;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px 30px;
+    margin-left: 250px;
+    margin-top: 3.8em; 
+    transition: margin-left 0.3s ease;
+}
+
+
+.sidebar + .main-content {
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.visible {
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #bbb;
+    font-size: 1.3rem;
+    margin: 20px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav .active {
+    color: #f58549;
+    transform: translateX(10px);
+}

@@ -26,14 +26,11 @@ app.use(passport.session());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-app.use(express.static(path.join(__dirname, '../public')))
-app.use('/admin', express.static(path.join(__dirname, '../admin')));
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../admin'));
-
 app.use(routes);
+
+app.use(function(req, res, next) {
+    res.status(404).sendFile(path.join(__dirname, '../public/404.html'))
+})
 
 app.listen(port, "0.0.0.0", () => {
     console.log(`server is running on ${port}`)
